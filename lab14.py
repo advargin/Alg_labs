@@ -9,8 +9,22 @@ class CurrencyConv(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
+    def init_UI(self):
+        self.setWindowTitle('Конвертер валют')
+        self.setWindowIcon(QIcon('pngwing.com.png'))
+
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+
 app = QtWidgets. QApplication([])
 application = CurrencyConv()
 application.show()
-
 sys.exit(app.exec())
